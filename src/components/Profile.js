@@ -11,13 +11,6 @@ function Profile() {
         ...state.user
     })
 
-    const [email, setEmail] = useState('')
-
-    function handleChange2(event) {
-        console.log(event.target.value);
-        setEmail(event.target.value)
-      }
-
     const handleChange = (e) => {
         
         const {name, value} = e.target
@@ -62,8 +55,6 @@ function Profile() {
                         onChange={handleChange}
                     />
                 </div>
-                <input type='email' value={email} name='email' onChange={handleChange2} />
-
                 <input 
                     className="cursor-pointer"
                     type='submit' value='Save'/>
